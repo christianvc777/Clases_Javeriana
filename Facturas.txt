@@ -1,0 +1,15 @@
+Factura del Cliente #1
+Nombre: Luis
+Apellido: Sanchez
+Edad: 63
+
+Factura del Cliente #2
+Nombre: Laura
+Apellido: Jimenez
+Edad: 36
+
+Factura del Cliente #3
+Nombre: Arturo
+Apellido: Fernandez
+Edad: 19
+
