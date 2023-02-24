@@ -1,84 +1,180 @@
-//Quiz #1 - Cristian Vargas Cuadros
+/****
+
+Fecha: 16/02/2023
+Autor: Cristian Vargas Cuadros
+Taller #2: 
+
+***/
 
 #include <iostream>
-#include <ctime>
 #include <cstdlib>
+#include <ctime>
+#include <string>
+#include <vector>
 
 using namespace std;
 
-//Funcion - Ejercicio #3
+struct Valor{
+int max;
+int tam;
+} valor;
 
-void problema3(int arr4[][2], int n){
-    
-    cout<<endl;
-    srand(time(NULL));
-    cout<<"La Matriz Cuadrada Aleatoria"<<endl;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            arr4[i][j]=0+rand()%10;
-            cout<<arr4[i][j];
-        }
-        cout<<"\n";
-    }
+//Funcion - Generar Numeros Aleatorios
+
+void random(int fre[], int a, int n){
+	
+            srand(time(NULL));
+			cout<<"Generando Numeros Aleatorios"<<endl;
+    		for (int i=0; i<n; i++){
+        		a=1+rand()%10;
+        		fre[i]=a;
+       			cout<<"El numero ["<<i+1<<"] es: "<<a<<endl;
+    		}
+    	cout<<endl;
+	    int max=0;
+	    for(int i=0; i<n; i++)
+	    {
+		    if(fre[i]>max){
+			    max=fre[i];
+		    }	
+	    }
+	    valor.max=max;
+	    valor.tam=n;
+	    cout<<"El valor maximo es: "<<valor.max<<endl;
+	    cout<<"El tamaño de numeros aleatorios es: "<<valor.tam<<endl;
+	      	
 }
 
-//Funcio Principal
+//Funcion - Ordenar
 
-int main(){
-	
-	//Ejercicio #1
-	
-	cout<<"Ejercicio #1"<<endl;
-	int	arr1[5]={10,20,30,45,55};
-	int* puntero;
-	for(int i=0;i<5;i++){
-	    puntero=&arr1[i];
-	    cout<<"El numero del arreglo es: "<<*(puntero)<<endl;
-	}
-	
-	//Ejercicio #2
-	
-	cout<<endl;
-	cout<<"Ejercicio #2"<<endl;
-	char arr2[5]={'a','e','i','o','u'};
-	char arr3[5]={'a','i','u','e','a'};
-	char *punt2;
-	char *punt3;
+void ord(int fre[], int n){
+    
+    int i,j,aux;
+    for(i=0;i<n-1;i++){
+        for(j=i+1;j<n;j++){
+            if(fre[i]>fre[j]){
+                aux=fre[i];
+                fre[i]=fre[j];
+                fre[j]=aux;
+            }
+        }
+    }
+    for(i=0;i<n;i++){
+        cout<<fre[i]<<"  ";
+    }
+    cout<<endl;
+}
 
-	punt2=arr2;
-    punt3=arr3;
+//Funcion - Repeticiones
 
-	for(int i=0;i<5;i++){
-	    cout<<"La letra del arr2 son: "<<*punt2++<<endl;
-	}cout<<endl;
-	for(int i=0;i<5;i++){
-	    cout<<"La letra del arr3 son: "<<*punt3++<<endl;
+void veces(int fre[], int rep[], int n){
+    
+    int i,num=1,cont, len=0;
+    cout<<"Bandera 1"<<endl;
+    /*while(num<=10){
+        for(i=0;i<n;i++){
+            cont=0;
+            if(fre[i]==num){
+                cont++;
+            }
+        }
+        if(num<=10)
+        rep[i]=cont;
+        num++;
+    }*/
+    while(num<=10){
+        cont=0;
+        for(i=0;i<n;i++){
+            if(fre[i]==num){
+                cont++;
+            }
+        }
+        rep[i]=cont;
+        num++;
+    }
+    
+    len=num-1;
+    cout<<"Bandera 2"<<endl;
+    for(i=0;i<len;i++){
+        cout<<rep[i]<<"  ";
+    }
+    cout<<endl;
+}
+
+
+//Funcion - Generando el Histograma
+
+void hist(int fre[], int rep[], int n)
+{
+	int aux[n];
+        for(int i=0; i<n; i++){
+           int acum=0;
+           {
+               for(int j=0;j<n;j++)
+               {
+                   if(fre[j]==fre[i]){
+                    acum++;
+                   }
+               }
+           cout<<"Numero es: "<<fre[i]<<"\t"<<"Repeticiones: "<<acum<<"      "<<"Histograma: ";
+           for(int i=0;i<acum;i++){    	
+           	cout<<"*";
+		   }
+           cout<<endl;
+		   }
+        }
+}
+	
+//Funcion Menu
+
+int menu()
+
+{	
+	int op;
+	cout<<"Bienvenido al Programa de Histogramas"<<endl;
+	cout<<"Selecciona tu opcion"<<endl;
+    cout<<"	"<<endl;
+	cout<<"Opcion #1"<<"\t"<<"-> Generar Numeros Aleatorios"<<endl;
+	cout<<"Opcion #2"<<"\t"<<"-> Generar Histograma"<<endl;
+	cout<<"Opcion #0"<<"\t"<<"-> Salir"<<endl;
+	cout<<"Digite su opcion: ";
+	cin>>op;
+	cout<<endl;
+	return op;
+}
+
+//Funcion Principal	
+
+int main()
+{	 
+    int n;
+    cout<<"Ingrese la cantidad de numeros random: ";
+    cin>>n;
+	int opc;
+	opc=menu();
+	if(opc==0){
+	    cout<<"Hasta luego usuario :)";
+		exit(1);
+	}
+	int a,fre[100],rep[100];
+	while(opc!=0){	
+	switch(opc)
+	{	
+	case 1:
+			//Generando Numeros Aleatorios
+			random(fre,a,n);
+    		break;
+    		
+    case 2: 
+			//Llamando a la Funcion de Histogramas
+		    veces(fre,rep,n);
+			ord(fre,n);
+			hist(fre,rep,n);
+			break;		
+			
 	}
 	cout<<endl;
-	for(int i=0;i<5;i++){
-	    int cont=1;
-	    for(int j=0; j<5; j++){
-	        if(arr2[i]==arr3[j])
-	        cont++;
-	    }
-	    cout<<"La letra "<<arr2[i]<<" se repitio: "<<cont<<endl;
+	//Se repite el bucle hasta que opcion = 0
+	opc=menu();
 	}
-	
-	cout<<endl;
-	
-	//Ejercicio #3
-	
-	int n;
-	
-    cout<<"Ejercicio #3"<<endl;
-	cout<<"Digite las dimensiones de la matriz "<<endl;
-	cout<<"Digite 2 si es una matriz cuadrada: ";
-	cin>>n;
-	
-	int arr4[2][2];
-	
-	//Matriz Cuadrada
-	
-	problema3(arr4,n);
-	
 }
