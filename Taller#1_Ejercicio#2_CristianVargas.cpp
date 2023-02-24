@@ -5,63 +5,68 @@ Autor: Cristian Vargas Cuadros
 Clase: Miercoles y Viernes - 7-9 am
 
 Ejercicio #2
-	
+
 */
 
-#include <iostream> 
+#include <iostream>
+#include <fstream>
 
 using namespace std;
 
 //Estructura Factura
 
 struct Cliente{
-	
+
 	string nombre; //Nombre cliente
 	string apellido; //Apellido cliente
 	int edad; //Edad cliente
-	long double valor; //Valor de cada factura
-	
-}cliente,*puntero=&cliente; //Puntero es igual cliente
 
+};
 
 //Funcion Factura
 
 void factura(Cliente *puntero, int n){
-	
-	for(int i=0; i<n; i++){	
+
+	for(int i=0; i<n; i++){
 		cout<<endl;
 		//Solicitud de Datos Basicos
-		cout<<"Ingrese su nombre: "; 
+		cout<<"Ingrese su nombre: ";
 		cin>>puntero->nombre;
 		cout<<"Ingrese su apellido: ";
-		cin>>puntero->apellido;		
+		cin>>puntero->apellido;
 		cout<<"Ingrese su edad: ";
 		cin>>puntero->edad;
-		cout<<"Ingrese el valor de la factura: ";
-		cin>>puntero->valor;
 		cout<<endl;
-		//Generacion de Facturas
-		cout<<"Factura del Cliente #"<<i+1<<endl; 
-		cout<<endl;
-		cout<<"Nombre: "<<puntero->nombre<<endl;
-		cout<<"Apellido: "<<puntero->apellido<<endl;
-		cout<<"Edad: "<<puntero->edad<<endl;
-		cout<<"Factura: $"<<puntero->valor<<" euros"<<endl;
+		puntero++;
+	}
+	puntero=puntero-n;
 
-	}	
+	//Generacion de archivo de facturas
+	ofstream archivo("Facturas.txt");
+    for (int j=0; j<n; j++)
+    {
+	    //Impresion de los datos
+		archivo<<"Factura del Cliente #"<<j+1<<endl;
+		archivo<<"Nombre: "<<puntero->nombre<<endl;
+		archivo<<"Apellido: "<<puntero->apellido<<endl;
+		archivo<<"Edad: "<<puntero->edad<<endl;
+		archivo<<endl;
+		puntero++;
+    }
+    archivo.close();
 }
 
-//Funcion Principal 
-
 int main(){
-	
+
+	//Programa de Facturas
 	int n;
 	cout<<"Ingrese la cantidad de clientes: ";
 	cin>>n;
-	
-	//Generacion de Facturas Electronicas
-	
-	factura(puntero,n); //Llamando a la funcion factura
+	Cliente cliente[n],*puntero; //Arreglos tipo Cliente
+	puntero=cliente; //Puntero es igual cliente
+
+	//Llamando a la funcion factura
+	factura(puntero,n);
 
 	return 0;
 }
