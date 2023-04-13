@@ -32,7 +32,7 @@ class Rectangulo extends Figura{
   }
   Double area(){
     System.out.println("Area dentro de rectangulo.");
-    return(dim1*dim2)
+    return(dim1*dim2);
   }
 }
 
