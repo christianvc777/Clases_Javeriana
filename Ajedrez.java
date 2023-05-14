@@ -34,7 +34,8 @@ public class Ajedrez {
         jugadores.add(new Jugador("Mónica", 2350, 28, 2500));
 
       /*En este caso como todos los niveles de Elo son diferentes,
-      Ese seria el único criterio ejecutable, y ya todo el arreglo             de jugadores de ajedrez estaria ordenado
+      Ese seria el único criterio ejecutable, y ya todo el arreglo             
+      de jugadores de ajedrez estaria ordenado
       */
       
         // Ordenar jugadores por ELO
@@ -91,7 +92,8 @@ class Jugador {
         return valorPremio;
     }
    
-  // Sobreescribimos el método toString() para que se muestren los valores de los atributos de manera legible
+  // Sobreescribimos el método toString() para que se muestren 
+  // los valores de los atributos de manera legible
   
     public String toString() {
         return nombre + ", ELO: " + elo + ", Edad: " + edad + ", Valor del premio: " + valorPremio;
