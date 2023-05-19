@@ -6,6 +6,9 @@
                     Programador: Cristian Vargas Cuadros
 *******************************************************************************/
 
+import java.util.ArrayList;
+import java.util.List;
+
 // Clase abstracta Modelo
 abstract class Modelo {
     protected String nombre;
@@ -126,24 +129,24 @@ class Validador {
 
 public class Main {
     public static void main(String[] args) {
-        
-//Crear instancias de los modelos ModeloLineal y ModeloArbolDecision
-        ModeloLineal modeloLineal1 = new ModeloLineal("Modelo Lineal 1", 2, 0.85, 0.1);
-        ModeloArbolDecision modeloArbolDecision1 = new ModeloArbolDecision("Modelo Árbol Decisión 1", 3, 9, 8);
-        ModeloLineal modeloLineal2 = new ModeloLineal("Modelo Lineal 2", 2, 0.7, 0.3);
-        ModeloArbolDecision modeloArbolDecision2 = new ModeloArbolDecision("Modelo Árbol Decisión 2", 3, 11, 4);
+        // Crear instancias de los modelos ModeloLineal y ModeloArbolDecision
+        Modelo modeloLineal1 = new ModeloLineal("Modelo Lineal 1", 2, 0.85, 0.1);
+        Modelo modeloArbolDecision1 = new ModeloArbolDecision("Modelo Árbol Decisión 1", 3, 9, 8);
+        Modelo modeloLineal2 = new ModeloLineal("Modelo Lineal 2", 2, 0.7, 0.3);
+        Modelo modeloArbolDecision2 = new ModeloArbolDecision("Modelo Árbol Decisión 2", 3, 11, 4);
 
-//Validacion de los modelos con el metodo validarModelo
-        Validador.validarModelo(modeloLineal1);
-        Validador.validarModelo(modeloArbolDecision1);
-        Validador.validarModelo(modeloLineal2);
-        Validador.validarModelo(modeloArbolDecision2);
+        // Crear una lista de Modelos y agregar los modelos a la lista
+        List<Modelo> modelos = new ArrayList<>();
+        modelos.add(modeloLineal1);
+        modelos.add(modeloArbolDecision1);
+        modelos.add(modeloLineal2);
+        modelos.add(modeloArbolDecision2);
+
+        // Entrenar los modelos usando polimorfismo
+        for (Modelo modelo : modelos) {
+            modelo.entrenar();
+        }
+
         System.out.println("Author: Cristian Vargas Cuadros");
-
     }
-   
 }
-
-
-
-
