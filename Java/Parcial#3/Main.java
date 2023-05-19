@@ -4,7 +4,6 @@
                     Objetivo: Modelos de Machine Learning
                     Teoria: Clases Abstractas y Overriding
                     Programador: Cristian Vargas Cuadros
-
 *******************************************************************************/
 
 // Clase abstracta Modelo
