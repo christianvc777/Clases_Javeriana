@@ -1,0 +1,81 @@
+
+Programación Avanzada
+
+Parcial #3 - 19 de Mayo 2023
+
+Alumno: Cristian Vargas Cuadros
+
+Conceptos
+
+1. La herencia permite que una clase adquiera los atributos y métodos de otra clase.
+ a. Verdadero
+ b. Falso
+ Respuesta: a. Verdadero
+
+2. El polimorfismo permite que un objeto se comporte de diferentes formas según el contexto.
+ a. Verdadero
+ b. Falso
+ Respuesta: a. Verdadero
+
+3. En Java, una clase puede heredar de múltiples clases al mismo tiempo.
+ a. Verdadero
+ b. Falso
+ Respuesta: b. Falso
+
+4. El método “super()” se utiliza en una clase hija para llamar al constructor de la clase
+padre.
+ a. Verdadero
+ b. Falso
+ Respuesta: a. Verdadero
+
+5. En el polimorfismo, se puede utilizar una referencia de la clase padre para referirse a un objeto de la clase hija.
+ a. Verdadero
+ b. Falso
+ Respuesta: a. Verdadero
+
+6. ¿Cuál de las siguientes opciones describe correctamente la herencia en programación orientada a objetos?
+
+A) La capacidad de una clase de heredar propiedades y métodos de otra clase.
+B) El proceso de encapsular datos y comportamientos en un solo objeto.
+C) La técnica de ocultar detalles internos de un objeto y mostrar solo la interfaz.
+D) La capacidad de un objeto de ser tratado como uno de varios tipos posibles.
+
+Respuesta: A) La capacidad de una clase de heredar propiedades y métodos de otra clase.
+
+7. ¿Cuál de las siguientes opciones describe mejor el polimorfismo en Java?
+
+A) La capacidad de una clase de heredar propiedades y métodos de otra clase.
+B) El proceso de encapsular datos y comportamientos en un solo objeto.
+C) La técnica de ocultar detalles internos de un objeto y mostrar solo la interfaz.
+D) La capacidad de un objeto de ser tratado como uno de varios tipos posibles.
+
+Respuesta: D) La capacidad de un objeto de ser tratado como uno de varios tipos posibles.
+
+8. ¿Cuál de las siguientes afirmaciones sobre las clases abstractas es correcta?
+
+A) Se pueden instanciar directamente.
+B) Pueden heredar de múltiples clases al mismo tiempo.
+C) Pueden contener implementaciones completas de todos sus métodos.
+D) Se utilizan como plantillas para crear subclases concretas.
+
+Respuesta: D) Se utilizan como plantillas para crear subclases concretas.
+
+9. ¿Cuál de las siguientes opciones describe mejor el concepto de sobreescritura de métodos en Java?
+
+A) La capacidad de una subclase de proporcionar una implementación diferente para un método heredado de la clase padre.
+B) La capacidad de una clase de heredar propiedades y métodos de otra clase.
+C) La técnica de ocultar detalles internos de un objeto y mostrar solo la interfaz.
+D) La capacidad de un objeto de ser tratado como uno de varios tipos posibles.
+
+Respuesta: A) La capacidad de una subclase de proporcionar una implementación diferente para un método heredado de la clase padre.
+
+10. ¿Cuál de las siguientes afirmaciones sobre las interfaces en Java es correcta?
+
+A) Pueden tener atributos y métodos con implementaciones predeterminadas.
+B) Pueden instanciarse directamente.
+C) Pueden heredar de otras interfaces y clases.
+D) Se utilizan para definir un contrato que una clase debe cumplir.
+
+Respuesta: D) Se utilizan para definir un contrato que una clase debe cumplir.
+
+FIN PARTE #1 - PARCIAL #3
