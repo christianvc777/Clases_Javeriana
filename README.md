@@ -1,8 +1,6 @@
-### Programacion_Avanzada
+### Programacion Avanzada
 
-### Programador 
-
-Cristian Vargas Cuadros
+### Programador - Cristian Vargas Cuadros
 
 ### Presentación
 
