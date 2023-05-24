@@ -4,7 +4,7 @@ Un simple juego de serpientes en Java.
 Uso de Threads y Java Swing para mostrar el juego.
 El código está bien comentado, si tienes alguna duda o quieres continuar con este proyecto no dudes en hacerlo 👌
 
-### Como luce:
+### Como luce el juego:
 ![alt tag](https://i.imgur.com/RVxiGad.png)
 
 ### Cómo ejecutar el proyecto:
