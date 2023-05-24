@@ -1,8 +1,8 @@
-### Programacion Avanzada
+### Programacion Avanzada - Universidad Javeriana
 
 ### Programador - Cristian Vargas Cuadros
 
-### Presentación
+### Presentación General
 
 Hola soy Cristian - Estudiante de Ingeniería de Sistemas - Universidad Javeriana.
 
@@ -10,7 +10,7 @@ Hola soy Cristian - Estudiante de Ingeniería de Sistemas - Universidad Javerian
 
 En este repositorio encontraras mis trabajos de programación:
 
-#### C++
+#### Programación en C++
 
 * Apuntadores
 * Archivos
@@ -24,7 +24,7 @@ En este repositorio encontraras mis trabajos de programación:
 * Recursividad
 * Talleres y Quices
 
-#### Java
+#### Programación en Java
 
 * Archivos
 * Array
