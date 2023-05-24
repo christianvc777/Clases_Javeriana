@@ -1,6 +1,6 @@
 ### Programacion Avanzada - Universidad Javeriana
 
-### Programador - Cristian Vargas Cuadros
+#### Programador - Cristian Vargas Cuadros
 
 ### Presentación General
 
@@ -41,5 +41,5 @@ En este repositorio encontraras mis trabajos de programación:
 * Proyecto#2
 * Talleres
 
-### Espero que te guste mi repositorio!!!
-
+### ¡¡¡Espero que te guste mi repositorio!!!
+#### Firma: Cristian Vargas
