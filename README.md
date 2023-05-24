@@ -4,7 +4,7 @@
 
 ### Presentación General
 
-Hola soy Cristian - Estudiante de Ingeniería de Sistemas - Universidad Javeriana.
+Hola soy Cristian - Estudiante de Ingeniería de Sistemas - Universidad Javeriana
 
 ### Contenido del Repositorio
 
